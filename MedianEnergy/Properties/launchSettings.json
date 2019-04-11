@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MedianEnergy": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "TOUFiles": "E:\\Work\\MedianEnergy\\EnergyFiles\\TOU",
+        "LPFiles": "E:\\Work\\MedianEnergy\\EnergyFiles\\LP"
+      }
+    }
+  }
+}
