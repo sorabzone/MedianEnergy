@@ -24,7 +24,7 @@ namespace MedianEnergy
                     .BuildServiceProvider();
 
                 // reading file path from environment variable
-                // environment varibale is easy to pass in CI/CD and DockerCompose
+                // environment variable is easy to pass in CI/CD and DockerCompose
                 // we can pass different paths for different deployment, without making any change in any application config files
                 var lpFilePath = Environment.GetEnvironmentVariable("LPFiles");
                 var touFilePath = Environment.GetEnvironmentVariable("TOUFiles");

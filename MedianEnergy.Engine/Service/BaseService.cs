@@ -38,14 +38,6 @@ namespace MedianEnergy.Engine.Service
         public void PrintResult(OutputRecord output)
         {
             _outputService.GenerateOutput(output);
-            //Console.WriteLine("-----------------------------------------------------------");
-            //Console.WriteLine($"   Processing File - {output.Filename}");
-            //Console.WriteLine("-----------------------------------------------------------");
-            //foreach (var record in output.Records)
-            //{
-            //    Console.WriteLine($"{output.Filename} {record.DateAndTime} {record.BaseValue.ToString("N6")} {output.Median.ToString("N6")}");
-            //}
-            //Console.WriteLine("\n\n");
         }
 
         public IEnumerable<BaseFile> GetResult(List<T> records, decimal median)
