@@ -32,7 +32,7 @@ LPFiles - E:\Work\MedianEnergy\EnergyFiles\LP
 
 # MedianEnergy.Engine
 Engines process csv files to generate the output.
-There is separate service to TOU and LP files, devived from base generic class. 
+There is separate service to TOU and LP files, derived from base generic class. 
 BaseService generic class provides common functionalies like CalculateMedian, PrintOutput, FilterRecords etc.
 
 Applicaton design allows it to easily expand to support different output formats. As per requirement the output is printed on console but there is another service to write result in an excel file. Type is injected in program.cs via DI.
@@ -53,7 +53,7 @@ Unit tests are created using NUnit testing framework.
 # Assumption & Limitations
 Since it is single page of requirements,following assumptions are considered during the design. The design and implementation may change depending on these assumptions:
 
-1. We expect output records group by file name.
+1. We expect output records to be grouped by file name.
 With above assumption, I processed several files in parallel but printing them out in console one at a time.
 
 
@@ -68,7 +68,7 @@ Application reads complete csv file in memory, which can be a problem if the fil
 It can be easily fixed, we just need to parse the file name to identify the type. 
 
 
-5. Value that are 20% above or below median value.
+5. Values that are 20% above or below median value.
 I assumed it means the median value is 100% or threshhold.
 example: if median is 20 then 
 20% below is 16
@@ -78,8 +78,8 @@ example: if median is 20 then
 6. CSVHelper Nuget package is used to read csv records in objects.
 
 
-7. Right now the application only neads Datetime and Value column, but still I am reading all column value.
-Code can be changed to only read these two columns instead of everything. It will reduce memory consumption.
+7. The application only needs Datetime and Value column, but still I am reading all columns.
+Code can be changed to read ony these two columns instead of everything. It will reduce memory consumption.
 
 
 8. Decimal precision is upto 6 decimal places
